@@ -11591,7 +11591,7 @@ section.full {
     font-size: 30px;
     line-height: 35px;
     left: 40px;
-    top: 100px;
+    top: 70px;
   }
 }
 @media (max-height: 500px) {
@@ -11635,7 +11635,7 @@ section.full {
     font-size: 30px;
     line-height: 35px;
     left: 40px;
-    top: 110px;
+    top: 80px;
   }
 }
 @media (max-height: 500px) {
