@@ -79,6 +79,120 @@ section.full {
   height: 100%;
 }
 
+.overlay-wrapper {
+ position: relative;
+}
+.overlay1, .overlay2, .overlay3{
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.overlay1 {
+  @include for-phone {
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 40px;
+    padding-top: 5px;
+  }
+  @include for-tablet-portrait {
+    font-size: 25px;
+    line-height: 40px;
+    padding-left: 40px;
+    padding-top: 5px;
+  }
+  @include for-tablet-landscape {
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 40px;
+    padding-top: 5px;
+  }
+  @include for-desktop {
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+  @include for-big-desktop {
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 60px;
+    padding-top: 20px;
+}
+}
+
+.overlay2 {
+  background: rgba(69, 100, 165, 0.5);
+  
+  @include for-phone {
+    font-size: 22px;
+    line-height: 20px;
+    left: 40px;
+    top: 65px;
+  }
+  @include for-tablet-portrait {
+    font-size: 30px;
+    line-height: 35px;
+    left: 40px;
+    top: 100px;
+  }
+  @include for-tablet-landscape {
+    font-size: 40px;
+    line-height: 48px;
+    left: 40px;
+    top: 170px;
+  }
+  @include for-desktop {
+    font-size: 50px;
+    line-height: 60px;
+    left: 40px;
+    top: 100px;
+  }
+  @include for-big-desktop {
+    font-size: 70px;
+    line-height: 82px;
+    left: 40px;
+    top: 140px;
+}
+}
+
+.overlay3 {
+  background: rgba(69, 100, 165, 0.5);
+  
+  @include for-phone {
+    font-size: 22px;
+    line-height: 20px;
+    left: 40px;
+    top: 70px;
+  }
+  @include for-tablet-portrait {
+    font-size: 30px;
+    line-height: 35px;
+    left: 40px;
+    top: 110px;
+  }
+  @include for-tablet-landscape {
+    font-size: 40px;
+    line-height: 48px;
+    left: 40px;
+    top: 180px;
+  }
+  @include for-desktop {
+    font-size: 50px;
+    line-height: 60px;
+    left: 40px;
+    top: 110px;
+  }
+  @include for-big-desktop {
+    font-size: 70px;
+    line-height: 82px;
+    left: 40px;
+    top: 150px;
+}
+}
+
 //Section with text-center
 .centered-paragraph {
   margin: auto;
@@ -88,437 +202,659 @@ section.full {
   color: #000;
 
   @include for-phone {
-	font-size: 16px;
-	line-height: 22px;
-	padding-left: 10px;
-	padding-right: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   @include for-tablet-portrait {
-	font-size: 25px;
-	line-height: 40px;
-	padding-left: 10px;
-	padding-right: 10px;
+    font-size: 25px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   @include for-tablet-landscape {
-	font-size: 30px;
-	line-height: 50px;
-	padding-left: 40px;
-	padding-right: 40px;
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   @include for-desktop {
-	font-size: 30px;
-	line-height: 50px;
-	padding-left: 40px;
-	padding-right: 40px;
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
-  @include for-big-desktop {	
-	  font-size: 30px;
-	  line-height: 50px;
+  @include for-big-desktop {
+    font-size: 30px;
+    line-height: 50px;
   }
 }
 
 .green-rectangle {
-	background-color: #7ed329;
+  background-color: #7ed329;
 
-	@include for-phone {
-		width: 100%;
-		height: 5px;
-		}
-	@include for-tablet-portrait {
-		width: 50%;
-		height: 29px;
-	}
-	@include for-desktop {
-		width: 50%;
-		height: 60px;
-	}
-	@include for-big-desktop {
-		width: 50%;
-		height: 60px;
-		}
+  @include for-phone {
+    width: 100%;
+    height: 5px;
+  }
+  @include for-tablet-portrait {
+    width: 50%;
+    height: 29px;
+  }
+  @include for-desktop {
+    width: 50%;
+    height: 60px;
+  }
+  @include for-big-desktop {
+    width: 50%;
+    height: 60px;
+  }
 }
 
 .green-rectangle2 {
-	background-color: #7ed329;
+  background-color: #7ed329;
 
-	@include for-phone {
-		width: 100%;
-		height: 5px;
-		}
-	@include for-tablet-portrait {
-		width: 60%;
-		height: 29px;
-	}
-	@include for-desktop {
-		width: 60%;
-		height: 60px;
-	}
-	@include for-big-desktop {
-		width: 60%;
-		height: 60px;
-		}
+  @include for-phone {
+    width: 100%;
+    height: 5px;
+  }
+  @include for-tablet-portrait {
+    width: 60%;
+    height: 29px;
+  }
+  @include for-desktop {
+    width: 60%;
+    height: 60px;
+  }
+  @include for-big-desktop {
+    width: 60%;
+    height: 60px;
+  }
 }
 
 // For the rectangle on the opposite side
 .rectangle-wrapper {
-	display: flex;
-	flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
-
 
 .box-wrapper {
-	margin-bottom: 5%;
-	@include for-phone {
-		width: 300px;
-	}
-	@include for-tablet-portrait {
-		width: 560px;
-	}
-	@include for-tablet-landscape {
-		width: 560px;
-	}
-	@include for-desktop {
-		width: 780px;
-	}
-	@include for-big-desktop {
-		width: 1010px;
-	}
-	
+  margin-bottom: 5%;
+  @include for-phone {
+    width: 300px;
+  }
+  @include for-tablet-portrait {
+    width: 480px;
+  }
+  @include for-tablet-landscape {
+    width: 560px;
+  }
+  @include for-desktop {
+    width: 780px;
+  }
+  @include for-big-desktop {
+    width: 1010px;
+  }
 }
 
+.box {
+  padding-top: 0;
+  padding-left: 0;
+  border-radius: 0;
+}
 
-.box, .box-green {
-		border: 1px solid #5ede5f;
-		padding-top: 0;
-		padding-left: 0;
-		border-radius: 0;	 
+.box-green {
+  border: 1px solid #5ede5f;
+}
+
+.box-red {
+  border: 1px solid $grapefruit;
 }
 
 .text-image {
-	display: flex;
-	padding: 10px;
-	@include for-phone {
-		flex-direction: column;
-		}
+  display: flex;
+  padding: 10px;
+  @include for-phone {
+    flex-direction: column;
+  }
 }
 
 .text-image2 {
-	display: flex;
-	padding: 10px;
-	@include for-phone {
-		flex-direction: column-reverse;
-		}
+  display: flex;
+  padding: 10px;
+  @include for-phone {
+    flex-direction: column-reverse;
+  }
 }
 
 .image-box {
-	@include for-phone {
-		flex-direction: column;
-	}
-	@include for-tablet-portrait {
-		flex: 50%;
-	}
-	@include for-tablet-landscape {
-		flex: 50%;
-	}
-	@include for-desktop {
-		flex: 50%;
-	}
-	@include for-big-desktop {
-		flex: 50%;
-	}
+  @include for-phone {
+    flex-direction: column;
+  }
+  @include for-tablet-portrait {
+    flex: 50%;
+  }
+  @include for-tablet-landscape {
+    flex: 50%;
+  }
+  @include for-desktop {
+    flex: 50%;
+  }
+  @include for-big-desktop {
+    flex: 50%;
+  }
 }
 
 .text-box {
-	@include for-phone {
-		font-size: 16px;
-		line-height: 22px;
-		padding-left: 10px;
-		padding-right: 10px;
-	  }
-	  @include for-tablet-portrait {
-		font-size: 25px;
-		line-height: 40px;
-		padding-left: 10px;
-		padding-right: 10px;
-		flex: 50%;
-	  }
-	  @include for-tablet-landscape {
-		font-size: 30px;
-		line-height: 50px;
-		padding-left: 40px;
-		padding-right: 40px;
-		flex: 50%;
-		padding-left: 20px;
-		padding-right: 20px;
-	  }
-	  @include for-desktop {
-		font-size: 30px;
-		line-height: 50px;
-		padding-left: 40px;
-		padding-right: 40px;
-		flex: 50%;
-		padding-left: 20px;
-		padding-right: 20px;
-	  }
-	  @include for-big-desktop {	
-		  font-size: 30px;
-		  line-height: 50px;
-		  flex: 50%;
-		  padding-left: 20px;
-		  padding-right: 20px;
-	  }
+  @include for-phone {
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include for-tablet-portrait {
+    font-size: 25px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 50%;
+  }
+  @include for-tablet-landscape {
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    flex: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include for-desktop {
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    flex: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include for-big-desktop {
+    font-size: 30px;
+    line-height: 50px;
+    flex: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .green-span {
-	font-weight: 700;
-	color: $apple;
+  font-weight: 700;
+  color: $apple;
 }
 
 .bold-span {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .zlatev {
-	@include for-phone {
-		width: 70%;
-		display: block;
-		margin: auto;
-	  }
-	  @include for-tablet-portrait {
-		width: 70%;
-		padding-left: 30px;
-	  }
-	  @include for-tablet-landscape {
-		width: 30%;
-		padding-left: 30px;
-	  }
-	  @include for-desktop {
-		width: 50%;
-		padding-left: 30px;
-	
-	  }
-	  @include for-big-desktop {	
-		  width: 50%;
-		  padding-left: 30px;
-	  }
+  @include for-phone {
+    width: 70%;
+    display: block;
+    margin: auto;
+  }
+  @include for-tablet-portrait {
+    width: 70%;
+    padding-left: 30px;
+  }
+  @include for-tablet-landscape {
+    width: 30%;
+    padding-left: 30px;
+  }
+  @include for-desktop {
+    width: 50%;
+    padding-left: 30px;
+  }
+  @include for-big-desktop {
+    width: 50%;
+    padding-left: 30px;
+  }
 }
 .blue {
-	margin-top: -40px;
-	display: flex;
-	justify-content: center;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
 }
 .span-blue {
-	display: flex;
-	padding: 3px;
-	background: $eu-blue;
-	color: #fff;
-	text-align: left;
-	font-weight: bold;
-	text-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  padding: 3px;
+  background: $eu-blue;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
 
-	@include for-phone {
-		font-size: 18px;
-		line-height: 22px;
-		
-	  }
-	  @include for-tablet-portrait {
-		font-size: 30px;
-		line-height: 40px;
-		
-	  }
-	  @include for-tablet-landscape {
-		font-size: 40px;
-		line-height: 50px;
-		
-	  }
-	  @include for-desktop {
-		font-size: 50px;
-		line-height: 70px;
-	
-	  }
-	  @include for-big-desktop {	
-		  font-size: 60px;
-		  line-height: 80px;
-	  }
+  @include for-phone {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 5px;
+  }
+  @include for-tablet-portrait {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 5px;
+  }
+  @include for-tablet-landscape {
+    font-size: 40px;
+    line-height: 50px;
+    padding: 5px;
+  }
+  @include for-desktop {
+    font-size: 50px;
+    line-height: 70px;
+    padding: 10px;
+  }
+  @include for-big-desktop {
+    font-size: 60px;
+    line-height: 80px;
+    padding: 10px;
+  }
 }
 
 .gallery-text {
-	font-family: $family-secondary;
-	color: $eu-blue;
-	margin: auto;
-	text-align: left;
-	  @include for-phone {
-		font-size: 12px;
-		line-height: 22px;
-		
-	  }
-	  @include for-tablet-portrait {
-		font-size: 16px;
-		line-height: 30px;
-		
-	  }
-	  @include for-tablet-landscape {
-		font-size: 16px;
-		line-height: 30px;
-		
-	  }
-	  @include for-desktop {
-		font-size: 18px;
-		line-height: 43px;
-	
-	  }
-	  @include for-big-desktop {	
-		  font-size: 22px;
-		  line-height: 56px;
-	  }
+  font-family: $family-secondary;
+  color: $eu-blue;
+  margin: auto;
+  text-align: left;
+  @include for-phone {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  @include for-tablet-portrait {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  @include for-tablet-landscape {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  @include for-desktop {
+    font-size: 18px;
+    line-height: 43px;
+  }
+  @include for-big-desktop {
+    font-size: 22px;
+    line-height: 56px;
+  }
 }
 
 .btn {
-	background-color: $eu-blue;
-	color: #fff;
-	font-family: $family-secondary;
-	text-transform: uppercase;
-	font-weight: bold;
-	display: block;
-	margin: auto;
-	
+  background-color: $eu-blue;
+  color: #fff;
+  font-family: $family-secondary;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  margin: auto;
 
-	
-	@include for-phone {
-		height: 30px;
-		width: 150px;
-		line-height: 32px;
-		border-radius: 26px;
-		font-size: 10px;
-		padding-left: 28px;
-		margin-bottom: 20px;
-	  }
-
-	  @include for-tablet-portrait {
-		height: 34px;
-		width: 180px;
-		line-height: 35px;
-		border-radius: 26px;
-		font-size: 12px;
-		padding-left: 30px;
-		margin-bottom: 30px;
-	  }
-	
-  
-	  @include for-tablet-landscape {
-		height: 34px;
-		width: 180px;
-		line-height: 35px;
-		border-radius: 26px;
-		font-size: 12px;
-		padding-left: 30px;
-		margin-bottom: 30px;
-	}
-
-	@include for-desktop {
-		height: 54px;
-		width: 248px;
-		line-height: 55px;
-		border-radius: 26px;
-		font-size: 16px;
-		padding-left: 45px;
-		margin-bottom: 50px;
-	}
-  
-	@include for-big-desktop {
-		height: 54px;
-		width: 248px;
-		line-height: 55px;
-		border-radius: 26px;
-		font-size: 16px;
-		padding-left: 45px;
-		margin-bottom: 50px;
-	}
+  @include for-phone {
+    height: 30px;
+    width: 150px;
+    line-height: 32px;
+    border-radius: 26px;
+    font-size: 10px;
+    padding-left: 28px;
+    margin-bottom: 20px;
   }
 
-  .gallery-photos, .two-photos {
-	display: flex;
+  @include for-tablet-portrait {
+    height: 34px;
+    width: 180px;
+    line-height: 35px;
+    border-radius: 26px;
+    font-size: 12px;
+    padding-left: 30px;
+    margin-bottom: 30px;
   }
+
+  @include for-tablet-landscape {
+    height: 34px;
+    width: 180px;
+    line-height: 35px;
+    border-radius: 26px;
+    font-size: 12px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include for-desktop {
+    height: 54px;
+    width: 248px;
+    line-height: 55px;
+    border-radius: 26px;
+    font-size: 16px;
+    padding-left: 45px;
+    margin-bottom: 50px;
+  }
+
+  @include for-big-desktop {
+    height: 54px;
+    width: 248px;
+    line-height: 55px;
+    border-radius: 26px;
+    font-size: 16px;
+    padding-left: 45px;
+    margin-bottom: 50px;
+  }
+}
+
+.btn:hover {
+	color: $eu-blue;
+	background-color: white;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+	border-color: white;
+  }
+
+.gallery-photos,
+.two-photos {
+  display: flex;
+}
 
 .photo-small {
-	flex: 33.3%;
-	padding: 5px;
-	width: 20%;
+  flex: 33.3%;
+  padding: 5px;
+  width: 20%;
 }
 
-  .photo-big {
-	  flex: 50%;
-	  padding: 5px;
-	  width: 20%;
+.photo-big {
+  flex: 50%;
+  padding: 5px;
+  width: 20%;
+}
+.red {
+  display: flex;
+  justify-content: center;
+
+  @include for-phone {
+    margin-top: -50px;
+    margin-bottom: 30px;
   }
-  .red {
-	display: flex;
-	justify-content: center;
+  @include for-tablet-portrait {
+    margin-top: -130px;
+    margin-bottom: 50px;
+  }
+  @include for-tablet-landscape {
+    margin-top: -100px;
+    margin-bottom: 50px;
+  }
+  @include for-desktop {
+    margin-top: -150px;
+    margin-bottom: 70px;
+  }
+  @include for-big-desktop {
+    margin-top: -150px;
+    margin-bottom: 70px;
+  }
 }
 .span-red {
-	display: flex;
-	padding: 3px;
-	background: $grapefruit;
-	color: #fff;
-	text-align: left;
-	font-weight: bold;
-	text-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  background: $grapefruit;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
 
-	@include for-phone {
-		font-size: 18px;
-		line-height: 22px;
-		
-	  }
-	  @include for-tablet-portrait {
-		font-size: 30px;
-		line-height: 40px;
-		
-	  }
-	  @include for-tablet-landscape {
-		font-size: 40px;
-		line-height: 50px;
-		
-	  }
-	  @include for-desktop {
-		font-size: 50px;
-		line-height: 70px;
-	
-	  }
-	  @include for-big-desktop {	
-		  font-size: 60px;
-		  line-height: 80px;
-	  }
+  @include for-phone {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 5px;
+  }
+  @include for-tablet-portrait {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 5px;
+  }
+  @include for-tablet-landscape {
+    font-size: 40px;
+    line-height: 50px;
+    padding: 5px;
+  }
+  @include for-desktop {
+    font-size: 50px;
+    line-height: 70px;
+    padding: 10px;
+  }
+  @include for-big-desktop {
+    font-size: 60px;
+    line-height: 80px;
+    padding: 10px;
+  }
 }
 
+.red_birds {
+  @include for-phone {
+    margin-top: -80px;
+  }
+  @include for-tablet-portrait {
+    margin-top: -130px;
+  }
+  @include for-tablet-landscape {
+    margin-top: -100px;
+  }
+  @include for-desktop {
+    margin-top: -150px;
+  }
+  @include for-big-desktop {
+    margin-top: -150px;
+  }
+}
 
+.red-rectangle {
+  background-color: $grapefruit;
+
+  @include for-phone {
+    width: 100%;
+    height: 5px;
+  }
+  @include for-tablet-portrait {
+    width: 50%;
+    height: 29px;
+  }
+  @include for-desktop {
+    width: 50%;
+    height: 60px;
+  }
+  @include for-big-desktop {
+    width: 50%;
+    height: 60px;
+  }
+}
+
+.accent-span {
+  color: $grapefruit;
+  text-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  @include for-phone {
+    font-size: 72px;
+    line-height: 60px;
+  }
+  @include for-tablet-portrait {
+    font-size: 100px;
+    line-height: 80px;
+  }
+  @include for-tablet-landscape {
+    font-size: 100px;
+    line-height: 80px;
+  }
+  @include for-desktop {
+    font-size: 157px;
+    line-height: 130px;
+  }
+  @include for-big-desktop {
+    font-size: 184px;
+    line-height: 150px;
+  }
+}
+
+.text-box-red {
+  display: flex;
+}
+
+.red-paragraph {
+  flex: 40%;
+}
+
+.blue2 {
+  display: flex;
+  justify-content: center;
+  @include for-phone {
+    margin-top: -35px;
+    margin-bottom: 70px;
+  }
+  @include for-tablet-portrait {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  @include for-tablet-landscape {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  @include for-desktop {
+    margin-top: -100px;
+    margin-bottom: 180px;
+  }
+  @include for-big-desktop {
+    margin-top: -100px;
+    margin-bottom: 180px;
+  }
+}
+
+.span-blue-paragraph {
+  display: flex;
+  background: $eu-blue;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+
+  @include for-phone {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @include for-tablet-portrait {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  @include for-tablet-landscape {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  @include for-desktop {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  @include for-big-desktop {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+.blue-paragraph {
+  @include for-phone {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @include for-tablet-portrait {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  @include for-tablet-landscape {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  @include for-desktop {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  @include for-big-desktop {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
 
 //FOOTER
 .footer {
   background-color: $white;
+  padding: 0;
 }
 
-.container-footer {
-  h4,
-  a {
-    padding: 20px;
-  }
-
-  @include for-tablet-portrait {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-footer,
+h4 {
+  @include for-phone {
     font-size: 12px;
   }
-
+  @include for-tablet-portrait {
+    font-size: 14px;
+  }
   @include for-tablet-landscape {
+    font-size: 14px;
+  }
+  @include for-desktop {
+    font-size: 16px;
+  }
+  @include for-big-desktop {
     font-size: 20px;
   }
+}
+
+.logo {
+  max-width: 30%;
+  @include for-phone {
+    max-width: 20%;
+  }
+}
+
+.logo1 {
+  max-width: 30%;
+  @include for-phone {
+    max-width: 30%;
+  }
+}
+
+.logo2 {
+  max-width: 50%;
+  @include for-phone {
+    padding-left: 20px;
+  }
+  @include for-tablet-portrait {
+    padding-left: 40px;
+  }
+  @include for-tablet-landscape {
+    padding-left: 40px;
+  }
+  @include for-desktop {
+    padding-left: 40px;
+  }
+  @include for-big-desktop {
+    padding-left: 40px;
+  }
+}
+.second-footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 
   @include for-phone {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
+    margin-top: 40px;
+  }
+  @include for-tablet-portrait {
+    margin-top: 40px;
+  }
+  @include for-tablet-landscape {
+    margin-top: 40px;
+  }
+  @include for-desktop {
+    margin-top: 60px;
+  }
+  @include for-big-desktop {
+    margin-top: 60px;
   }
 }
