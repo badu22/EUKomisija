@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EU Beach Cleanup</title>
-	<meta name="title" content="EU Beach Cleanup">
-	<meta name="description"
-		content="Čiste plaže za sretnu budućnost! Zajedno zaštitimo morski život!">
-    <link rel="stylesheet" href="css/main.css?v=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>EU Beach Cleanup</title>
+		<meta name="title" content="EU Beach Cleanup">
+		<meta name="description"
+			content="Čiste plaže za sretnu budućnost! Zajedno zaštitimo morski život!">
+		
+		<!-- swiper js -->
+		<link
+			rel="stylesheet"
+			href="plugins/swiper/swiper-bundle.min.css"
+		/>
+		<script src="plugins/swiper/swiper-bundle.min.js"></script>
 
-	<!-- Facebook -->
-	<meta property="og:url" content="https://native.story.hr/preview/EUkomisija/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="EU komisija" />
-	<meta property="og:description"
-		content="Čiste plaže za sretnu budućnost! Zajedno zaštitimo morski život!" />
-	<meta property="og:image" content="https://native.story.hr/preview/EUkomisija/share.jpg" />
-	<meta property="og:image:width" content="1280" />
-	<meta property="og:image:height" content="720" />
-	<meta property="fb:app_id" content="684146431996498">
+		<!-- photo swipe -->
+		<!-- Core CSS file -->
+		<link rel="stylesheet" href="plugins/photoswipe/photoswipe.css"> 
 
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">	
+		<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+			In the folder of skin CSS file there are also:
+			- .png and .svg icons sprite, 
+			- preloader.gif (for browsers that do not support CSS animations) -->
+		<link rel="stylesheet" href="plugins/photoswipe/default-skin/default-skin.css"> 
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-267402-38"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-267402-38');
-	</script>
-  </head>
+		<!-- Core JS file -->
+		<script src="plugins/photoswipe/photoswipe.min.js"></script> 
+
+		<!-- UI JS file -->
+		<script src="plugins/photoswipe/photoswipe-ui-default.min.js"></script> 
+
+		<!-- main styles -->
+		<link rel="stylesheet" href="css/main.css?v=1">
+
+		<!-- Facebook -->
+		<meta property="og:url" content="https://native.story.hr/preview/EUkomisija/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="EU komisija" />
+		<meta property="og:description"
+			content="Čiste plaže za sretnu budućnost! Zajedno zaštitimo morski život!" />
+		<meta property="og:image" content="https://native.story.hr/preview/EUkomisija/share.jpg" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="720" />
+		<meta property="fb:app_id" content="684146431996498">
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">	
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-267402-38"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'UA-267402-38');
+		</script>
+	</head>
 
   <body>
 
@@ -160,32 +185,128 @@
 		</div>
 	</section>
 
-	<!-- Gallery -->
-	<section class="box-wrapper">
-		<div class="gallery-photos">
-			<img class="photo-small" src="./_assets/images/galerija_1.jpg" alt="Čišćenje plaža">
-			<img class="photo-small" src="./_assets/images/galerija_2.jpg" alt="Čišćenje plaža">
-			<img class="photo-small" src="./_assets/images/galerija_3.jpg" alt="YouTuberica Debela Barbara">
-			<img class="photo-small" src="./_assets/images/galerija_4.jpg" alt="Čišćenje plaža">
+	<!-- Slider main container -->
+	<div class="my-gallery">
+		<section class="box-wrapper">
+			<div class="swiper">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper ">
+					<!-- Slides -->
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/1.jpg" class="gallBtn" id="blah" data-size="1200x870">
+								<img src="./_assets/images/galerija_1.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/2.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_2.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/3.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_3.jpg" alt="YouTuberica Debela Barbara">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/4.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_4.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/5.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_1.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/6.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_2.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/7.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_3.jpg" alt="YouTuberica Debela Barbara">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/8.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_4.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/9.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_1.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/10.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_2.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/11.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_3.jpg" alt="YouTuberica Debela Barbara">
+							</a>
+						</figure>
+					</div>
+					<div class="swiper-slide">
+						<figure class="gallItem">
+							<a href="./_assets/gallery/12.jpg" class="gallBtn" data-size="1200x870">
+								<img src="./_assets/images/galerija_4.jpg" alt="Čišćenje plaža">
+							</a>
+						</figure>
+					</div>
+				</div>
+				
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</section>
 
-		</div>
-	</section>
+		<!-- Button -->
+		<section>
+			<div>
+				<a href="#" class="btn gallTrigger">POGLEDAJ GALERIJU</a>
+			</div>
+		</section>
 
-	<!-- Button -->
-	<section>
-		<div>
-			<a href="#" class="btn">POGLEDAJ GALERIJU</a>
-		</div>
-	</section>
-
-	<!-- Two photos -->
-	<section class="box-wrapper">
-		<div class="two-photos">
-			<img class="photo-big" src="./_assets/images/BeachCleanUP1.jpg" alt="Čišćenje plaže">
-			<img class="photo-big" src="./_assets/images/BeachCleanUP2.jpg" alt="Čišćenje plaže">
-
-		</div>
-	</section> 
+		<!-- Two photos -->
+		<section class="box-wrapper">
+			<div class="two-photos">
+				<figure class="gallItem photo-big">
+					<a href="./_assets/gallery/12.jpg" class="gallBtn" data-size="1200x870">
+						<img src="./_assets/images/BeachCleanUP1.jpg" alt="Čišćenje plaža">
+					</a>
+				</figure>
+				<figure class="gallItem photo-big">
+					<a href="./_assets/gallery/12.jpg" class="gallBtn" data-size="1200x870">
+						<img src="./_assets/images/BeachCleanUP2.jpg" alt="Čišćenje plaža">
+					</a>
+				</figure>
+			</div>
+		</section> 
+	</div>
 
 	<!-- Red title -->
 	<section>
@@ -321,6 +442,74 @@
 	<div>
 		<img src="./_assets/images/footerbirds@3x.png" alt="Plave ptice">
 		</div>
+
+
+	<!-- Root element of PhotoSwipe. Must have class pswp. -->
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+		<!-- Background of PhotoSwipe. 
+			It's a separate element as animating opacity is faster than rgba(). -->
+		<div class="pswp__bg"></div>
+
+		<!-- Slides wrapper with overflow:hidden. -->
+		<div class="pswp__scroll-wrap">
+
+			<!-- Container that holds slides. 
+				PhotoSwipe keeps only 3 of them in the DOM to save memory.
+				Don't modify these 3 pswp__item elements, data is added later on. -->
+			<div class="pswp__container">
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+			</div>
+
+			<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+			<div class="pswp__ui pswp__ui--hidden">
+
+				<div class="pswp__top-bar">
+
+					<!--  Controls are self-explanatory. Order can be changed. -->
+
+					<div class="pswp__counter"></div>
+
+					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+					<button class="pswp__button pswp__button--share" title="Share"></button>
+
+					<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+					<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+					<!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+					<!-- element will get class pswp__preloader--active when preloader is running -->
+					<div class="pswp__preloader">
+						<div class="pswp__preloader__icn">
+						<div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+					<div class="pswp__share-tooltip"></div> 
+				</div>
+
+				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+				</button>
+
+				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+				</button>
+
+				<div class="pswp__caption">
+					<div class="pswp__caption__center"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
     
 	<script type="text/javascript" src="lib/main.js"></script>
   </body>
