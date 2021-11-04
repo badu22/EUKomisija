@@ -586,6 +586,33 @@ section.full {
   //   background-color: #ffcc00;
   // }
 }
+
+// Gallery
+.swiper-button-prev {
+  @include for-phone {
+    left: 10px;
+    right: auto;
+    top: 22px;
+  }
+  @include for-tablet-portrait {
+  left: 10px;
+  right: auto;
+  top: 38px;
+}
+}
+.swiper-button-next {
+  @include for-phone {
+    right: 10px;
+    left: auto;
+    top: 22px;
+  }
+
+  @include for-tablet-portrait {
+    right: 10px;
+    left: auto;
+    top: 38px;
+  }
+}
 .red {
   display: flex;
   justify-content: center;

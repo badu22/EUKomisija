@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const swiper = new Swiper('.swiper', {
 		// Optional parameters
-		loop: true,
+		loop: false,
 		slidesPerGroup: 4,
 		slidesPerView: 4,
 		spaceBetween: 20,
@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				linkEl,
 				size,
 				item;
-	
+			
+				console.log(thumbElements, numNodes);
 			for(var i = 0; i < numNodes; i++) {
 	
 				figureEl = thumbElements[i]; // <figure> element
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			e.preventDefault ? e.preventDefault() : e.returnValue = false;
 	
 			var eTarget = e.target || e.srcElement;
-	
+			
 			// find root element of slide
 			var clickedListItem = closest(eTarget, function(el) {
 				return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
@@ -88,33 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			if(!clickedListItem) {
 				return;
 			}
-	
-			// find index of clicked item by looping through all child nodes
-			// alternatively, you may define index via data- attribute
-			var clickedGallery = clickedListItem.parentNode,
-				childNodes = clickedListItem.parentNode.childNodes,
-				numChildNodes = childNodes.length,
-				nodeIndex = 0,
-				index;
-	
-			for (var i = 0; i < numChildNodes; i++) {
-				if(childNodes[i].nodeType !== 1) { 
-					continue; 
-				}
-	
-				if(childNodes[i] === clickedListItem) {
-					index = nodeIndex;
-					break;
-				}
-				nodeIndex++;
-			}
-	
-	
+			
+			var index = clickedListItem.getAttribute('data-index')
 	
 			if(index >= 0) {
 				// open PhotoSwipe if valid index found
-				openPhotoSwipe( index, clickedGallery );
+				var galleryElem = document.querySelectorAll(gallerySelector)[0];
+				openPhotoSwipe( index, galleryElem );
 			}
+
 			return false;
 		};
 	
@@ -220,9 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		document.querySelectorAll('.gallTrigger')[0].addEventListener('click', function (event) {		
 			event.preventDefault();
-			var galleryElem = document.querySelectorAll('.my-gallery')[0];
+			var galleryElem = document.querySelectorAll(gallerySelector)[0];
 			openPhotoSwipe( 0, galleryElem );
-		
 		}, false);
 	};
 	
